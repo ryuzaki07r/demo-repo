@@ -42,7 +42,7 @@ jobs:
       run: mvn --batch-mode --update-snapshots verify
     - name: Publish package
       run: | 
-          mvn --batch-mode release:update-versions -DdevelopmentVersion=0.1.0-SNAPSHOT
+          
           mvn --batch-mode deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
